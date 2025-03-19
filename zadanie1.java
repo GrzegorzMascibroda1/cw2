@@ -1,6 +1,7 @@
 public class zadanie1 {
     public static int[] filterEvenIndexOddValue(int[] arr) {
         int ile =0;
+        int indexresult = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 == 1 && i % 2 == 0) {
                 ile++;
@@ -9,7 +10,8 @@ public class zadanie1 {
         int[] result = new int[ile];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 == 1 && i % 2 == 0) {
-                result[i] = arr[i];
+                result[indexresult] = arr[i];
+                indexresult++;
             }
         }
         return result;
